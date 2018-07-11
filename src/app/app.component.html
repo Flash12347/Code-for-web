@@ -1,0 +1,109 @@
+<nav class="navbar navbar-dark bg-primary">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <i class="fas fa-circle-notch"></i>
+ 
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tips and Tricks</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Advisors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
+      </li>
+   
+    </ul>
+  </div>
+ </nav>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+      * {
+        box-sizing: border-box;
+      }
+     
+      #myInput {
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+      }
+     
+      #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+     
+      #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+      }
+     
+      #myUL li a:hover:not(.header) {
+        background-color: #eee;
+      }
+ 
+      div.center{
+        position: absolute;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+      }
+      </style>
+      </head>
+      <body>
+      <div class="center">
+        <h1>Social Fit</h1>
+        <input type="text" id="myInput" onkeyup="mmFunction()" placeholder="Search for signs.." title="What are you looking for?">
+     
+ <ul id="myUL">
+  <li><a href="#">Agressive</a></li>
+  <li><a href="#">Ignorant</a></li>
+ 
+  <li><a href="#">Depressed</a></li>
+  <li><a href="#">Territorial</a></li>
+ </ul> 
+      </div>
+     
+ </body>
+     
+     
+      <script>
+      function myFunction() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myUL");
+          li = ul.getElementsByTagName("li");
+          for (i = 0; i < li.length; i++) {
+              a = li[i].getElementsByTagName("a")[0];
+              if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                  li[i].style.display = "";
+              } else {
+                  li[i].style.display = "none";
+              }
+          }
+      }
+      </script>
+     
+ 
+ 
